@@ -1,0 +1,479 @@
+body {
+  display: flex;
+  flex-direction: column; /* Stack navbar and container vertically */
+  /* justify-content: center; */ /* Remove centering for navbar */
+  /* align-items: center; */ /* Remove centering for navbar */
+  min-height: 100vh;
+  margin: 0;
+  background-color: #e8f5e9; /* Light green background */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+  color: red;
+}
+
+.navbar {
+  background-color: #2e7d32;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make navbar full width */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mt-5 {
+  margin-top: 3rem !important; /* Bootstrap mt-5 */
+}
+
+.mt-4 {
+  margin-top: 2.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-2 {
+  margin-top: 1rem !important;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: white;
+  background-clip: border-box;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.card-header {
+  padding: 15px;
+  margin-bottom: 0;
+  background-color: #2e7d32 !important; /* Darker green for header */
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-radius: 10px 10px 0 0;
+  color: white;
+}
+
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+h3 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.75rem; /* Bootstrap h3 size */
+  color: inherit; /* Inherit color, overridden by text-white */
+}
+
+h4 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important; /* Bootstrap mb-3 */
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #2e7d32;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn-success {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #1b5e20;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-danger {
+  background-color: #007bff;
+  color: white;
+  margin-right: 30px;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.alert {
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.alert-danger {
+  background-color: #ffebee;
+  color: #5b4848;
+  border: 1px solid #ffcdd2;
+}
+
+.alert-success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.alert-info {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+
+/* File Upload Styles */
+.drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.drop-area.highlight {
+  border-color: #0d6efd;
+  background-color: #e9ecef;
+}
+
+.drop-area p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #0b5ed7;
+}
+
+.file-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.file-info p {
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+#resultMessage {
+  /* display: none; Initially hidden, controlled by React state */
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px; /* Add max-width */
+  text-align: center;
+  z-index: 1000;
+  /* Remove translateY animation for simplicity, can be added back with CSS transitions if needed */
+}
+
+.message-success {
+  background-color: #d4edda; /* Light green */
+  color: #155724; /* Dark green */
+  border: 1px solid #c3e6cb;
+}
+
+.message-error {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24; /* Dark red */
+  border: 1px solid #f5c6cb;
+}
+
+/* File list styles for dashboard */
+.files-container {
+  margin-top: 20px;
+}
+
+.file-card {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #007bff;
+}
+
+.file-details {
+  flex-grow: 1;
+}
+
+.file-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.file-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.file-meta {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .card-header {
+    padding: 12px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+  }
+  .navbar .logo {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .navbar button, .btn-danger {
+    width: 100%;
+    margin-top: 4px;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-right: 10px;
+  }
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 500;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #2e7d32;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44,62,80,0.35);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  animation: modalIn 0.25s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes modalIn {
+  0% { transform: scale(0.95) translateY(30px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #2e7d32;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.heading-spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #b2dfdb;
+  border-top: 3px solid #2e7d32;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-left: 4px;
+}
