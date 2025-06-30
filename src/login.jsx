@@ -15,7 +15,7 @@ function Login() {
     try {
       if (username === 'umid' && password === 'u1121') {
         localStorage.setItem('token', 'dummy-token');
-        navigate('/aloqa');
+        navigate('/select');
       } else {
         setError('Login yoki parol noto\'g\'ri');
       }
